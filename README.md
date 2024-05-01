@@ -24,7 +24,7 @@ To get started with the project clone the repository and install the dependencie
 
 ```bash
 git clone https://github.com/mirko0/kosenje-i-krcenje.git
-cd your-repo
+cd kosenje-i-krcenje
 npm install
 ```
 
