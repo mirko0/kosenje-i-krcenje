@@ -1,0 +1,14 @@
+{
+    "name": "Ko\u0161enje I Kr\u010denje",
+    "short_name": "Ko\u0161enje I Kr\u010denje",
+    "icons": [
+        {
+            "src": "/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f37a1f",
+    "background_color": "#f37a1f",
+    "display": "standalone"
+}

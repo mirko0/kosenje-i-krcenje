@@ -1,0 +1,44 @@
+div#pagehead {
+
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  background-image: linear-gradient(30deg, rgba(136, 51, 39, 0) 0%, #0e0e0e63 80%),
+    url("./assets/trimerstihl.jpg");
+  height: 35rem;
+
+}
+
+.about {
+  background-color: #f5f7f5;
+  padding-top: 2rem;
+  background-image: linear-gradient(150deg, rgba(136, 51, 39, 0) 0%, #0e0e0eb2 80%),
+;
+}
+
+.titleline::after {
+    content: '';
+    display: block;
+    background-color: #f37a1f;
+    width: 3rem;
+    height: 0.16rem;
+    margin-top: 0.1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f37a1f;
+  border-radius: 10px;
+}
