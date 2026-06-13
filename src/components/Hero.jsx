@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Button } from './ui/button'
-import { IconPhone, IconChevronDown } from '@tabler/icons-react';
+import { IconPhone, IconChevronDown, IconArrowDown } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -12,8 +12,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-white">
-                        <span className="text-primary italic">KOŠENJE</span> I KRČENJE
+                    <h1 className="mb-6 whitespace-nowrap text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-white">
+                        <span className="text-primary italic mr-3 sm:mr-5 pr-1">KOŠENJE</span>I KRČENJE
                     </h1>
                 </motion.div>
 
@@ -35,11 +35,15 @@ const Hero = () => {
                     <Button
                         variant="default"
                         size="xl"
-                        className="w-full sm:w-auto bg-primary hover:bg-orange-600 text-white rounded-full px-12 py-8 text-xl shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all hover:-translate-y-1 active:scale-95"
+                        className="group/cta w-full sm:w-auto relative overflow-hidden bg-gradient-to-br from-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-500 text-white rounded-full px-12 py-8 text-xl font-bold shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 active:scale-95"
                         asChild
                     >
                         <a href="tel:+381642503500" className="flex items-center gap-3">
-                            <IconPhone className="w-6 h-6" />
+                            {/* shine sweep on hover */}
+                            <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" />
+                            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover/cta:rotate-12 group-hover/cta:scale-110">
+                                <IconPhone className="w-6 h-6" />
+                            </span>
                             064/250-350-0
                         </a>
                     </Button>
@@ -47,7 +51,7 @@ const Hero = () => {
                     <Button
                         variant="transparent"
                         size="xl"
-                        className="w-full sm:w-auto border-2 border-white/30 hover:border-white text-white rounded-full px-12 py-8 text-xl backdrop-blur-sm transition-all hover:bg-white/10"
+                        className="group/usl w-full sm:w-auto border-2 border-white/40 hover:border-white text-white rounded-full px-12 py-8 text-xl font-bold backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 active:translate-y-0 active:scale-95"
                         onClick={() => {
                             const element = document.getElementById('sekcije');
                             if (element) {
@@ -55,7 +59,10 @@ const Hero = () => {
                             }
                         }}
                     >
-                        Naše usluge
+                        <span className="flex items-center gap-3">
+                            Naše usluge
+                            <IconArrowDown className="w-5 h-5 transition-transform duration-300 group-hover/usl:translate-y-1" />
+                        </span>
                     </Button>
                 </motion.div>
             </div >

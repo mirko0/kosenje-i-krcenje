@@ -22,18 +22,18 @@ export const SECTIONS = [
         ]
     },
     {
-        title: 'OBARANJE MANJIH I SREDNJIH STABALA',
-        image: '/obaranje.jpg',
+        title: 'OBARANJE STABALA',
+        image: '/obaranje2.jpg',
         id: 'obaranje',
         description:
-            "Potreba za uklanjanjem suvih ili neplodnih stabala može biti važna za sigurnost i estetiku vašeg prostora. Naš tim efikasno i sigurno obara manja i srednja stabla, kao i grane koje predstavljaju rizik. Vaša bezbednost i mir su naš prioritet.",
+            'Vršimo profesionalno obaranje stabala uz maksimalnu bezbednost i efikasnost. Specijalizovani smo za obaranje manjih i srednjih stabala u dvorištima, voćnjacima, šumama i na drugim terenima.',
         sections: [
+            'Radimo obaranje manjih i srednjih stabala klasičnom tehnikom sečenja, uz korišćenje profesionalne opreme i dugogodišnje iskustvo u radu.',
+            'Za veća i zahtevnija stabla radimo uz pomoć korpe, što omogućava bezbedno uklanjanje stabla deo po deo, posebno u urbanim sredinama i skučenim prostorima.',
             'Obaranje stabala je složen proces koji zahteva pažnju, veštinu i odgovarajuću opremu. Prvo, važno je pažljivo proceniti stablo i okolinu kako biste odredili pravac obaranja. Zatim se vrši priprema prostora oko stabla, uklanjanje prepreka i postavljanje sigurnosnih mera.',
             'Kada je sve spremno, pristupa se obaranju stabla. To se obično radi sečenjem trupa u određenom redosledu kako bi se postigao kontrolisan pad stabla. Važno je pravilno proceniti ugao sečenja i pravac pada kako bi se izbegle nezgode i oštećenja okoline.',
             'Nakon što stablo padne, obavlja se čišćenje i uklanjanje preostalih delova. Ovo može biti opasan posao, pa je važno imati iskustvo i pravilnu opremu kako biste obezbedili sigurnost tokom celog procesa.',
-            'Obaranje stabala je važna aktivnost u održavanju šuma i uređenju prostora, ali zahteva stručnost i oprez kako bi se izbegle nezgode i očuvala okolina.',
-            'Ukoliko na vašem prostoru posedujete stablo ili više stabala, a da vam predstavljaju smetnju,dovode vas u opasnost ili vam više nisu potrebna, budite slobodni da nas kontaktirate.',
-        ]
+            'Ukoliko na vašem prostoru posedujete stablo ili više stabala, a da vam predstavljaju smetnju, dovode vas u opasnost ili vam više nisu potrebna, budite slobodni da nas kontaktirate.'        ]
     },
     {
         title: 'VAĐENJE MANJIH PANJEVA SA KORENOM',
@@ -68,20 +68,18 @@ export const SECTIONS = [
         ]
     },
     {
-        title: 'SLAGANJE I SKLADIŠTENJE DRVA ZA OGREV',
-        image: '/slaganje.jpg',
-        id: 'slaganjedrva',
+        title: 'OBARANJE STABALA',
+        image: '/obaranje2.jpg',
+        id: 'obaranje',
         position: "bottom",
         description:
-            'Pre kišnih i hladnih dana je vrlo važno skloniti drva za ogrev na sigurno. Vršimo usluge skladištenja drva za ogrev tokom cele godine. Ova usluga može iči u sklopu prethodne, koja se odnosi na sečenje ili zasebno.',
+            'Vršimo profesionalno obaranje stabala uz maksimalnu bezbednost i efikasnost. Specijalizovani smo za obaranje manjih i srednjih stabala u dvorištima, voćnjacima, šumama i na drugim terenima.',
         sections: [
-            'Skladištenje drva za ogrev je važan korak kako bi se osiguralo da drvo bude suvo i spremno za upotrebu kada dođe vreme loženja. Predstavljamo vam nekoliko korisnih saveta o tome kako pravilno skladištiti drva za ogrev:',
-            '1. Izbor odgovarajućeg mesta - drva za ogrev treba čuvati na suvom i provetrenom mestu. Idealno bi bilo da je skladište za drva daleko od vlage i direktnog kontakta sa zemljom.',
-            '2. Krov ili nadstrešnica - ako je moguće, drva za ogrev treba čuvati pod nadstrešnicom ili nekim oblikom krova koji će ih zaštititi od kiše i snega.',
-            '3. Dobar protok vazduha - važno je osigurati dobar protok vazduha oko drva kako bi se sprečila pojava plesni i buđi. Drva treba postaviti na način da vazduh može slobodno cirkulisati između njih.',
-            '4. Podignuti drva - drva za ogrev treba čuvati podignuta od poda kako bi se sprečilo upijanje vlage iz zemlje. Možete koristiti palete ili drvene daske za podizanje drva.',
-            '5. Redovno proveravanje - redovno proveravajte drva za ogrev kako biste bili sigurni da su suva i spremna za upotrebu. Ako primetite da su drva vlažna, potrebno ih je dodatno osušiti pre nego što ih koristite za loženje.',
-            'Efikasno i brzo skladištimo vaša drva u vašem prostoru kako biste spremno dočekali zimu. Na vama je da odlučite gde ćete smestiti drva i da nas pozovete. Sledeći naše savete, budite sigurni da će vaša drva biti suva i spremna za ogrev.',
+            'Bezbednost je naš prioritet. Svakom stablu pristupamo pažljivo, uz procenu pravca pada, okoline i potencijalnih prepreka kako bismo izbegli oštećenja objekata, ograda ili drugih stabala.',
+            'Radimo obaranje manjih i srednjih stabala klasičnom tehnikom sečenja, uz korišćenje profesionalne opreme i dugogodišnje iskustvo u radu.',
+            'Za veća i zahtevnija stabla radimo uz pomoć korpe (auto-korpe), što omogućava bezbedno uklanjanje stabla deo po deo, posebno u urbanim sredinama i skučenim prostorima.',
+            'Po potrebi vršimo i sečenje stabla na manje delove radi lakšeg uklanjanja ili pripreme za ogrev.',
+            'Uslugu prilagođavamo vašim potrebama – bilo da je u pitanju pojedinačno stablo ili više stabala na istoj lokaciji.'
         ]
     },
 ]
@@ -90,20 +88,37 @@ export const SECTIONS = [
 import { Link } from 'react-router-dom'
 import { IconArrowRight } from '@tabler/icons-react'
 
+const textItem = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+}
+
 const Sections = () => {
     return (
         <section id='sekcije' className="py-20 bg-white">
-            <div className="container mx-auto px-4 mb-16 text-center">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="container mx-auto px-4 mb-16 text-center"
+            >
                 <h2 className="text-primary font-black uppercase tracking-widest mb-4">Šta radimo</h2>
                 <h1 className="text-dark text-4xl font-black md:text-6xl mb-6">Naše Usluge</h1>
-                <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
-            </div>
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="w-24 h-1.5 bg-primary mx-auto rounded-full origin-center"
+                ></motion.div>
+            </motion.div>
 
             <div className="space-y-24">
                 {SECTIONS.map((section, index) => (
                     <Section
                         index={index}
-                        key={section.id}
+                        key={`${section.id}-${index}`}
                         title={section.title}
                         description={section.description}
                         id={section.id}
@@ -128,41 +143,59 @@ const Section = ({ title, description, image, id, sections, index }) => {
                 <div className={`flex flex-wrap items-center -mx-4 ${isEven ? '' : 'flex-row-reverse'}`}>
                     <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
                         <motion.div
-                            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
-                            className="relative"
+                            initial={{ opacity: 0, x: isEven ? -60 : 60, rotate: isEven ? -2 : 2 }}
+                            whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+                            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            whileHover={{ y: -6 }}
+                            className="relative group/img"
                         >
-                            <div className="absolute -inset-4 bg-primary/10 rounded-[2.5rem] rotate-3 -z-10"></div>
-                            <img
-                                src={mainImage}
-                                alt={title}
-                                className="w-full h-[400px] md:h-[500px] object-cover rounded-[2rem] shadow-2xl border-4 border-white"
-                            />
-                            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-4 rounded-2xl shadow-xl hidden md:block border border-orange-100">
+                            <div className="absolute -inset-4 bg-primary/10 rounded-[2.5rem] rotate-3 -z-10 transition-transform duration-500 group-hover/img:rotate-6"></div>
+                            <div className="overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white">
+                                <img
+                                    src={mainImage}
+                                    alt={title}
+                                    className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover/img:scale-105"
+                                />
+                            </div>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.6, y: 20 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.4 }}
+                                viewport={{ once: true }}
+                                className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-4 rounded-2xl shadow-xl hidden md:block border border-orange-100"
+                            >
                                 <span className="text-primary font-black text-2xl">0{index + 1}</span>
                                 <span className="ml-3 font-bold text-gray-800">Profesionalna usluga</span>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </div>
 
                     <div className="w-full lg:w-1/2 px-4">
                         <motion.div
-                            initial={{ opacity: 0, x: isEven ? 50 : -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-80px" }}
+                            variants={{
+                                hidden: {},
+                                visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+                            }}
                             className={`${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}
                         >
-                            <h3 className="text-3xl md:text-4xl font-black text-dark mb-6 leading-tight">
+                            <motion.h3
+                                variants={textItem}
+                                className="text-3xl md:text-4xl font-black text-dark mb-6 leading-tight"
+                            >
                                 {title}
-                            </h3>
-                            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                            </motion.h3>
+                            <motion.p
+                                variants={textItem}
+                                className="text-lg text-gray-700 mb-8 leading-relaxed"
+                            >
                                 {description}
-                            </p>
+                            </motion.p>
 
-                            <div className="flex flex-wrap gap-4 mb-10">
+                            <motion.div variants={textItem} className="flex flex-wrap gap-4 mb-10">
                                 {sections.slice(0, 1).map((s, idx) => (
                                     <div key={idx} className="flex items-start gap-3 text-gray-600">
                                         <div className="mt-1 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -171,15 +204,17 @@ const Section = ({ title, description, image, id, sections, index }) => {
                                         <span className="font-medium line-clamp-3">{s}</span>
                                     </div>
                                 ))}
-                            </div>
+                            </motion.div>
 
-                            <Link
-                                to={`/usluga/${id}`}
-                                className="inline-flex items-center gap-3 bg-dark text-white hover:bg-primary px-8 py-4 rounded-2xl font-black transition-all shadow-lg hover:shadow-primary/30 group active:scale-95"
-                            >
-                                VIŠE INFORMACIJA
-                                <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            <motion.div variants={textItem}>
+                                <Link
+                                    to={`/usluga/${id}`}
+                                    className="inline-flex items-center gap-3 bg-dark text-white hover:bg-primary px-8 py-4 rounded-2xl font-black transition-all shadow-lg hover:shadow-primary/30 group active:scale-95"
+                                >
+                                    VIŠE INFORMACIJA
+                                    <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </motion.div>
                         </motion.div>
                     </div>
                 </div>

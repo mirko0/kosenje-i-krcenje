@@ -1,23 +1,55 @@
 import React from 'react'
-import { ParallaxScroll } from './ui/parallax-scroll';
-const Gallery = () => {
+import { ModernGallery } from './ui/modern-gallery';
+
+const Gallery = ({ isFullPage = false }) => {
     return (
-        <div id='galerija' className='about text-center'>
+        <div id='galerija' className={`text-center ${!isFullPage ? 'about pt-24 pb-16' : ''}`}>
+            {!isFullPage && (
+                <div className="container mx-auto px-4 mb-12">
+                    <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Transformacije</span>
+                    <h1 style={{ color: "#2e3135" }} className={"mb-6 text-4xl md:text-5xl font-black"}>Galerija</h1>
+                    <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+                </div>
+            )}
 
-            <h1 style={{ color: "#2e3135" }} className={"titleline mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl"}>Galerija</h1>
-
-
-            <ParallaxScroll images={images} />
+            <div className="w-full">
+                <ModernGallery images={images} />
+            </div>
         </div>
     )
 }
 
 
-const images = ["https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",];
+const images = ["/beforeafter/11.jpg", "/beforeafter/12.jpg",
+    "/beforeafter/21.jpg", "/beforeafter/22.jpg",
+    "/beforeafter/31.jpg", "/beforeafter/32.jpg",
+    "/beforeafter/41.jpg", "/beforeafter/42.jpg",
+    "/beforeafter/51.jpg", "/beforeafter/52.jpg",
+    "/beforeafter/61.jpg", "/beforeafter/62.jpg",
+    "/beforeafter/71.jpg", "/beforeafter/72.jpg",
+    "/beforeafter/81.jpg", "/beforeafter/82.jpg",
+    "/beforeafter/91.jpg", "/beforeafter/92.jpg",
+    "/beforeafter/101.jpg", "/beforeafter/102.jpg",
+    "/beforeafter/111.jpg", "/beforeafter/112.jpg",
+    "/beforeafter/121.jpg", "/beforeafter/122.jpg",
+    "/beforeafter/131.jpg", "/beforeafter/132.jpg",
+    "/beforeafter/141.jpg", "/beforeafter/142.jpg",
+    "/beforeafter/151.jpg", "/beforeafter/152.jpg",
+    "/beforeafter/161.jpg", "/beforeafter/162.jpg",
+    "/beforeafter/171.jpg", "/beforeafter/172.jpg",
+    "/beforeafter/181.jpg", "/beforeafter/182.jpg",
+    "/beforeafter/191.jpg", "/beforeafter/192.jpg",
+    "/beforeafter/201.jpg", "/beforeafter/202.jpg",
+    "/beforeafter/211.jpg", "/beforeafter/212.jpg",
+    "/beforeafter/221.jpg", "/beforeafter/222.jpg",
+    "/beforeafter/231.jpg", "/beforeafter/232.jpg",
+    "/beforeafter/241.jpg", "/beforeafter/242.jpg",
+    "/beforeafter/271.jpg", "/beforeafter/272.jpg",
+    "/beforeafter/281.jpg", "/beforeafter/282.jpg",
+    "/beforeafter/291.jpg", "/beforeafter/292.jpg",
+    "/beforeafter/301.jpg", "/beforeafter/302.jpg",
+    "/beforeafter/311.jpg", "/beforeafter/312.jpg",
+    "/beforeafter/321.jpg", "/beforeafter/322.jpg",
+];
 
 export default Gallery

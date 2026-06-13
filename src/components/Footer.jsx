@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { IconPhone, IconMail, IconMapPin, IconClock, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react'
+import { IconPhone, IconMail, IconMapPin, IconClock, IconBrandFacebook, IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react'
 
 const Footer = () => {
     return (
@@ -19,8 +19,11 @@ const Footer = () => {
                             <a href="https://www.facebook.com/profile.php?id=61550822166061" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-primary/20 hover:text-primary transition-all">
                                 <IconBrandFacebook size={24} />
                             </a>
-                            <a href="https://www.instagram.com/kosenje_krcenje_/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-primary/20 hover:text-primary transition-all">
+                            <a href="https://www.instagram.com/kosenjetravekrcenje/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-primary/20 hover:text-primary transition-all">
                                 <IconBrandInstagram size={24} />
+                            </a>
+                            <a href="https://www.tiktok.com/@cosinho31" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-primary/20 hover:text-primary transition-all">
+                                <IconBrandTiktok size={24} />
                             </a>
                         </div>
                     </div>
@@ -29,9 +32,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xl font-black mb-8 border-l-4 border-primary pl-4">Brzi Linkovi</h4>
                         <ul className="space-y-4 font-bold text-gray-400">
-                            <li><a href="/#onama" className="hover:text-primary transition-colors">O nama</a></li>
-                            <li><a href="/#sekcije" className="hover:text-primary transition-colors">Naše Usluge</a></li>
-                            <li><a href="/#radovi" className="hover:text-primary transition-colors">Naši Radovi</a></li>
+                            <li><Link to="/#onama" className="hover:text-primary transition-colors">O nama</Link></li>
+                            <li><Link to="/#sekcije" className="hover:text-primary transition-colors">Naše Usluge</Link></li>
+                            <li><Link to="/#radovi" className="hover:text-primary transition-colors">Naši Radovi</Link></li>
+                            <li><Link to="/galerija" className="hover:text-primary transition-colors">Galerija</Link></li>
                         </ul>
                     </div>
 

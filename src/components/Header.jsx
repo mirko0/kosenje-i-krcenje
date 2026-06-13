@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -29,12 +29,19 @@ export const LINKS = [
         link: '/#radovi',
         id: 'radovi',
     },
+    {
+        title: 'GALERIJA',
+        titleLow: "Galerija",
+        link: '/galerija',
+        id: 'galerija',
+    },
 ]
 
 const Header = ({ sticky = false }) => {
     const [open, setOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const location = useLocation()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,9 +51,10 @@ const Header = ({ sticky = false }) => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const handleLinkClick = (id) => {
+    const handleLinkClick = (id, url) => {
         setOpen(false)
         if (location.pathname !== '/') {
+            navigate(url)
             return
         }
         const element = document.getElementById(id)
@@ -94,9 +102,9 @@ const Header = ({ sticky = false }) => {
                                                 className={`${textClass} transition-colors hover:text-primary tracking-widest px-2 py-1`}
                                                 href={link.link}
                                                 onClick={(e) => {
-                                                    if (location.pathname === '/') {
+                                                    if (link.link.startsWith('/#') && location.pathname === '/') {
                                                         e.preventDefault()
-                                                        handleLinkClick(link.id)
+                                                        handleLinkClick(link.id, link.link)
                                                     }
                                                 }}
                                             >
@@ -173,9 +181,15 @@ const Header = ({ sticky = false }) => {
                                     href={link.link}
                                     className="flex items-center justify-between w-full py-4 px-6 font-bold text-2xl text-gray-800 hover:bg-gray-50 rounded-2xl transition-colors border border-gray-100"
                                     onClick={(e) => {
-                                        if (location.pathname === '/') {
-                                            e.preventDefault()
-                                            handleLinkClick(link.id)
+                                        if (link.link.startsWith('/#')) {
+                                            if (location.pathname === '/') {
+                                                e.preventDefault()
+                                                handleLinkClick(link.id, link.link)
+                                            } else {
+                                                setOpen(false)
+                                            }
+                                        } else {
+                                            setOpen(false)
                                         }
                                     }}
                                 >

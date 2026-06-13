@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 function AboutUs() {
-  const description = "Naš mali tim posluje veoma uspešno na teritoriji cele Vojvodine, a nekada izlazimo i van tih granica. Kao vrlo brz, efikasan i tim sa povoljnim cenama, sarađujemo sa fizičkim i pravnim licima. Za stalnu saradnju nudimo značajnu korekciju cene. Imajte na umu da, ukoliko želite više naših usluga ili stalnu saradnju nudimo vam značajnu korekciju cene.";
+  const description = "Naš mali tim posluje veoma uspešno na teritoriji cele Vojvodine, a nekada izlazimo i van tih granica. Kao vrlo brz, efikasan i tim sa povoljnim cenama, sarađujemo sa fizičkim i pravnim licima. Imajte na umu da, ukoliko želite više naših usluga ili stalnu saradnju nudimo vam značajnu korekciju cene.";
 
   return (
     <section id='onama' className='py-20 bg-white overflow-hidden'>

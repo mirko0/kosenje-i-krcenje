@@ -10,11 +10,11 @@ export const FEATURES = [
             'Naše usluge košenja trave i krčenja prostora pružaju vam mogućnost da uživate u vašem okruženju bez smetnji. Brzo i efikasno uklanjamo visoku travu, žbunje i šiblje kako biste imali uređen prostor. Redovno održavanje vaših placeva takođe je deo naše ponude, uz fleksibilnost u cenama.',
     },
     {
-        title: 'OBARANJE MANJIH I SREDNJIH STABALA',
+        title: 'OBARANJE STABALA',
         image: '/obaranje.jpg',
         id: 'obaranje',
         description:
-            "Potreba za uklanjanjem suvih ili neplodnih stabala može biti važna za sigurnost i estetiku vašeg prostora. Naš tim efikasno i sigurno obara manja i srednja stabla, kao i grane koje predstavljaju rizik. Vaša bezbednost i mir su naš prioritet.",
+            "Potreba za uklanjanjem suvih ili neplodnih stabala može biti važna za sigurnost i estetiku vašeg prostora. Naš tim efikasno i sigurno obara takva stabla, kao i grane koje predstavljaju rizik. Vaša bezbednost i mir su naš prioritet. Vršimo profesionalno obaranje stabala uz maksimalnu bezbednost i efikasnost.",
     },
     {
         title: 'VAĐENJE MANJIH PANJEVA SA KORENOM',
@@ -35,15 +35,7 @@ export const FEATURES = [
         id: 'secenjedrva',
         description:
             'Za sve vaše potrebe u pripremi ogreva, možete računati na nas. Pružamo uslugu sečenja drva tokom cele godine, omogućavajući vam da spremno dočekate hladne dane. Naš tim vam stoji na raspolaganju za sečenje drva prema vašim zahtevima, osiguravajući vam kvalitetno ogrevno drvo koje će vas grejati tokom zime.',
-    },
-    {
-        title: 'SLAGANJE I SKLADIŠTENJE DRVA ZA OGREV',
-        image: '/slaganje.jpg',
-        id: 'slaganjedrva',
-        position: "bottom",
-        description:
-            'Pre kišnih i hladnih dana je vrlo važno skloniti drva za ogrev na sigurno. Vršimo usluge skladištenja drva za ogrev tokom cele godine. Ova usluga može iči u sklopu prethodne, koja se odnosi na sečenje ili zasebno.',
-    },
+    }
 ];
 
 const Features = () => {
